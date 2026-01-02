@@ -224,18 +224,6 @@
 
         // --- LOGIC ---
 
-        function speakVietnamese(text) {
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'vi-VN';
-                utterance.rate = 0.8;
-                window.speechSynthesis.speak(utterance);
-            } else {
-                alert('죄송합니다. 이 브라우저는 음성 재생을 지원하지 않습니다.');
-            }
-        }
-
         function showSection(id) {
             ['spots', 'eat', 'shop', 'tips'].forEach(s => {
                 document.getElementById(`sec-${s}`).classList.add('hidden');
@@ -352,15 +340,12 @@
             renderShop();
             document.getElementById('phrase-list').innerHTML = phrases.map(p => `
                 <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xs font-bold text-slate-500">${p.ko}</span>
-                        <button onclick="speakVietnamese('${p.read}')" class="bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1 transition-colors">
-                            🔊 듣기
-                        </button>
-                    </div>
-                    <div class="text-left">
-                        <p class="text-sm font-bold text-sky-600">${p.vn}</p>
-                        <p class="text-[10px] text-slate-400 mt-1">${p.guide}</p>
+                    <div class="flex justify-between items-start">
+                        <div class="flex-grow">
+                            <p class="text-xs font-bold text-slate-500 mb-2">${p.ko}</p>
+                            <p class="text-lg font-bold text-sky-600 mb-1">${p.vn}</p>
+                            <p class="text-sm text-slate-600">${p.guide}</p>
+                        </div>
                     </div>
                 </div>
             `).join('');
