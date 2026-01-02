@@ -168,27 +168,27 @@
 
         // --- DATA ---
         const spotsData = [
-            { name: '침향타워(핑크타워)', walk: 5, grab: 2, type: 'walk', rating: 4.5, map: 'Tram Huong Tower' },
-            { name: '롯데마트(골드코스트)', walk: 8, grab: 3, type: 'walk', rating: 4.8, map: 'Lotte Mart Gold Coast' },
-            { name: '나트랑 야시장', walk: 10, grab: 4, type: 'walk', rating: 4.2, map: 'Nha Trang Night Market' },
-            { name: '나트랑 대성당', walk: 25, grab: 7, type: 'grab', rating: 4.4, map: 'Nha Trang Cathedral' },
-            { name: '포나가르 사원', walk: 45, grab: 12, type: 'grab', rating: 4.7, map: 'Po Nagar Cham Towers' },
-            { name: '롱선사', walk: 35, grab: 10, type: 'grab', rating: 4.6, map: 'Long Son Pagoda' },
-            { name: '담 시장', walk: 20, grab: 6, type: 'grab', rating: 4.0, map: 'Dam Market' },
-            { name: '아이리조트(머드)', walk: 99, grab: 20, type: 'grab', rating: 4.5, map: 'I-Resort Nha Trang' }
+            { name: '침향타워(핑크타워)', walk: 5, grab: 2, type: 'walk', rating: 4.5, map: 'Tram Huong Tower', desc: '나트랑의 랜드마크. 야경이 아름다우며 주변에 카페와 레스토랑이 많음. 인증샷 명소.' },
+            { name: '롯데마트(골드코스트)', walk: 8, grab: 3, type: 'walk', rating: 4.8, map: 'Lotte Mart Gold Coast', desc: '한국 식품 및 베트남 기념품 쇼핑. 지하 푸드코트도 이용 가능. 환전도 가능.' },
+            { name: '나트랑 야시장', walk: 10, grab: 4, type: 'walk', rating: 4.2, map: 'Nha Trang Night Market', desc: '저녁 6시부터 오픈. 길거리 음식과 기념품. 가격 흥정 필수. 해산물 BBQ 추천.' },
+            { name: '나트랑 대성당', walk: 25, grab: 7, type: 'grab', rating: 4.4, map: 'Nha Trang Cathedral', desc: '프랑스 고딕 양식의 석조 성당. 주말 미사 시간 피해서 방문. 사진 촬영 명소.' },
+            { name: '포나가르 사원', walk: 45, grab: 12, type: 'grab', rating: 4.7, map: 'Po Nagar Cham Towers', desc: '참파 왕국 유적. 입장료 22,000동. 반바지 입장 불가. 전망대에서 시내 조망 가능.' },
+            { name: '롱선사', walk: 35, grab: 10, type: 'grab', rating: 4.6, map: 'Long Son Pagoda', desc: '흰색 거대 불상이 유명. 계단 152개. 무료 입장. 조용한 분위기와 시티뷰.' },
+            { name: '담 시장', walk: 20, grab: 6, type: 'grab', rating: 4.0, map: 'Dam Market', desc: '현지인 재래시장. 과일, 의류, 건어물. 야시장보다 저렴. 소매치기 주의.' },
+            { name: '아이리조트(머드)', walk: 99, grab: 20, type: 'grab', rating: 4.5, map: 'I-Resort Nha Trang', desc: '머드 온천과 미네랄 욕. 입장료 350k~450k. 3~4시간 소요. 수영복 지참 필수.' }
         ];
 
         const eatData = [
-            { name: '피자 4P\'s (쉐라톤)', type: 'seafood', sub: '양식/피자', price: '250k+', dist: '도보 2분', note: '부라타 치즈 피자 필수. 예약 권장.', map: 'Pizza 4Ps Sheraton' },
-            { name: '안토이 (An Thoi)', type: 'local', sub: '현지식', price: '90k+', dist: '도보 12분', note: '깔끔한 베트남 가정식. 한국인 최애.', map: 'An Thoi Nha Trang' },
-            { name: '하이카 (Hai Ca)', type: 'local', sub: '쌀국수', price: '55k+', dist: '도보 8분', note: '오징어 어묵 쌀국수(분까). 시원한 국물.', map: 'Hai Ca Nha Trang' },
-            { name: '반미판 (Banh Mi Phan)', type: 'local', sub: '반미', price: '30k+', dist: '도보 15분', note: '나트랑 3대 반미. 소고기치즈 추천.', map: 'Banh Mi Phan' },
-            { name: '촌촌킴 (Chuon Chuon Kim)', type: 'local', sub: '가정식', price: '100k+', dist: '그랩 6분', note: '깔끔한 정식 스타일. 3층 규모.', map: 'Chuon Chuon Kim' },
-            { name: 'CCCP Coffee', type: 'cafe', sub: '카페', price: '48k', dist: '도보 11분', note: '박씨우, 코코넛 커피 1티어.', map: 'CCCP Coffee' },
-            { name: 'Rain Forest', type: 'cafe', sub: '카페', price: '55k+', dist: '도보 14분', note: '인테리어가 독특한 숲 컨셉 카페.', map: 'Rainforest Nha Trang' },
-            { name: '행복쌀국수', type: 'local', sub: '쌀국수', price: '65k', dist: '도보 10분', note: '뚝배기 쌀국수로 유명함.', map: 'Pho Hanh Phuc' },
-            { name: '한냐 (Hanh Xuan)', type: 'seafood', sub: '해산물', price: '변동', dist: '그랩 10분', note: '가성비 좋은 로컬 해산물 식당.', map: 'Hanh Xuan Seafood' },
-            { name: 'Sailing Club', type: 'cafe', sub: '바/펍', price: '150k+', dist: '도보 15분', note: '밤에 불쇼가 열리는 해변 바.', map: 'Sailing Club Nha Trang' }
+            { name: '피자 4P\'s (쉐라톤)', type: 'seafood', sub: '양식/피자', price: '250k+', dist: '도보 2분', note: '부라타 치즈 피자 필수. 예약 권장.', map: 'Pizza 4Ps Sheraton', menu: ['부라타 치즈 피자 290k', '살라미 피자 260k', '시그니처 파스타 220k'] },
+            { name: '안토이 (An Thoi)', type: 'local', sub: '현지식', price: '90k+', dist: '도보 12분', note: '깔끔한 베트남 가정식. 한국인 최애.', map: 'An Thoi Nha Trang', menu: ['분짜 90k', '쌀국수 85k', '분보후에 95k'] },
+            { name: '하이카 (Hai Ca)', type: 'local', sub: '쌀국수', price: '55k+', dist: '도보 8분', note: '오징어 어묵 쌀국수(분까). 시원한 국물.', map: 'Hai Ca Nha Trang', menu: ['분까 55k', '반짱껀 30k', '반미 35k'] },
+            { name: '반미판 (Banh Mi Phan)', type: 'local', sub: '반미', price: '30k+', dist: '도보 15분', note: '나트랑 3대 반미. 소고기치즈 추천.', map: 'Banh Mi Phan', menu: ['소고기치즈반미 40k', '일반반미 30k', '스페셜반미 50k'] },
+            { name: '촌촌킴 (Chuon Chuon Kim)', type: 'local', sub: '가정식', price: '100k+', dist: '그랩 6분', note: '깔끔한 정식 스타일. 3층 규모.', map: 'Chuon Chuon Kim', menu: ['볶음밥 세트 120k', '쌀국수 세트 110k', '분짜 세트 130k'] },
+            { name: 'CCCP Coffee', type: 'cafe', sub: '카페', price: '48k', dist: '도보 11분', note: '박씨우, 코코넛 커피 1티어.', map: 'CCCP Coffee', menu: ['코코넛 커피 48k', '박씨우 커피 52k', '에그커피 55k'] },
+            { name: 'Rain Forest', type: 'cafe', sub: '카페', price: '55k+', dist: '도보 14분', note: '인테리어가 독특한 숲 컨셉 카페.', map: 'Rainforest Nha Trang', menu: ['시그니처 커피 60k', '스무디 70k', '디저트 80k~'] },
+            { name: '행복쌀국수', type: 'local', sub: '쌀국수', price: '65k', dist: '도보 10분', note: '뚝배기 쌀국수로 유명함.', map: 'Pho Hanh Phuc', menu: ['뚝배기 쌀국수 65k', '일반 쌀국수 55k', '분보 70k'] },
+            { name: '한냐 (Hanh Xuan)', type: 'seafood', sub: '해산물', price: '변동', dist: '그랩 10분', note: '가성비 좋은 로컬 해산물 식당.', map: 'Hanh Xuan Seafood', menu: ['랍스터 시세', '새우구이 150k~', '조개찜 120k~'] },
+            { name: 'Sailing Club', type: 'cafe', sub: '바/펍', price: '150k+', dist: '도보 15분', note: '밤에 불쇼가 열리는 해변 바.', map: 'Sailing Club Nha Trang', menu: ['맥주 80k~', '칵테일 150k~', '안주류 200k~'] }
         ];
 
         const shopItems = {
@@ -237,24 +237,30 @@
         function renderSpots() {
             const walkCont = document.getElementById('spots-walk');
             const grabCont = document.getElementById('spots-grab');
-            
+
             walkCont.innerHTML = spotsData.filter(s => s.type === 'walk').map(s => `
-                <div class="bg-white p-4 rounded-xl border border-slate-100 flex justify-between items-center shadow-sm">
-                    <div>
-                        <h5 class="font-bold text-slate-800 text-sm">${s.name}</h5>
-                        <p class="text-[11px] text-slate-400">🚶 도보 ${s.walk}분 | ⭐ ${s.rating}</p>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-grow">
+                            <h5 class="font-bold text-slate-800 text-sm mb-1">${s.name}</h5>
+                            <p class="text-[11px] text-slate-400 mb-2">🚶 도보 ${s.walk}분 | ⭐ ${s.rating}</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">${s.desc}</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/${encodeURIComponent(s.map)}" target="_blank" class="bg-sky-50 text-sky-600 px-3 py-1.5 rounded-lg text-xs font-bold ml-2 shrink-0">지도</a>
                     </div>
-                    <a href="https://www.google.com/maps/search/${encodeURIComponent(s.map)}" target="_blank" class="bg-sky-50 text-sky-600 px-3 py-1.5 rounded-lg text-xs font-bold">지도</a>
                 </div>
             `).join('');
 
             grabCont.innerHTML = spotsData.filter(s => s.type === 'grab').map(s => `
-                <div class="bg-white p-4 rounded-xl border border-slate-100 flex justify-between items-center shadow-sm">
-                    <div>
-                        <h5 class="font-bold text-slate-800 text-sm">${s.name}</h5>
-                        <p class="text-[11px] text-slate-400">🚗 그랩 ${s.grab}분 | ⭐ ${s.rating}</p>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex-grow">
+                            <h5 class="font-bold text-slate-800 text-sm mb-1">${s.name}</h5>
+                            <p class="text-[11px] text-slate-400 mb-2">🚗 그랩 ${s.grab}분 | ⭐ ${s.rating}</p>
+                            <p class="text-xs text-slate-600 leading-relaxed">${s.desc}</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/${encodeURIComponent(s.map)}" target="_blank" class="bg-sky-50 text-sky-600 px-3 py-1.5 rounded-lg text-xs font-bold ml-2 shrink-0">지도</a>
                     </div>
-                    <a href="https://www.google.com/maps/search/${encodeURIComponent(s.map)}" target="_blank" class="bg-sky-50 text-sky-600 px-3 py-1.5 rounded-lg text-xs font-bold">지도</a>
                 </div>
             `).join('');
         }
@@ -266,16 +272,42 @@
 
             const filtered = type === 'all' ? eatData : eatData.filter(e => e.type === type);
             document.getElementById('eat-list').innerHTML = filtered.map(e => `
-                <div class="bg-white p-4 rounded-xl border border-slate-100 flex flex-col justify-between shadow-sm">
-                    <div>
-                        <div class="flex justify-between items-start mb-1">
-                            <span class="text-[9px] font-bold text-sky-500 uppercase">${e.sub}</span>
-                            <span class="text-[10px] text-slate-400 font-mono">${e.price}</span>
-                        </div>
-                        <h5 class="font-bold text-slate-800 text-sm mb-1">${e.name}</h5>
-                        <p class="text-[11px] text-slate-500 line-clamp-2">${e.note}</p>
+                <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="flex justify-between items-start mb-1">
+                        <span class="text-[9px] font-bold text-sky-500 uppercase">${e.sub}</span>
+                        <span class="text-[10px] text-slate-400 font-mono">${e.price}</span>
                     </div>
-                    <div class="mt-3 flex justify-between items-center pt-2 border-t border-slate-50">
+                    <h5 class="font-bold text-slate-800 text-sm mb-2">${e.name}</h5>
+                    <p class="text-[11px] text-slate-500 mb-3">${e.note}</p>
+
+                    <div class="bg-slate-50 p-2 rounded-lg mb-3">
+                        <p class="text-[9px] font-bold text-slate-400 mb-1 uppercase">추천 메뉴</p>
+                        ${e.menu.map(m => {
+                            const priceMatch = m.match(/(\d+(?:,\d+)?)(k)?([~+])?/);
+                            if (priceMatch) {
+                                const basePrice = parseInt(priceMatch[1].replace(',', ''));
+                                const multiplier = priceMatch[2] === 'k' ? 1000 : 1;
+                                const suffix = priceMatch[3] || '';
+                                const vndPrice = basePrice * multiplier;
+                                const krwPrice = Math.round(vndPrice * KRW_RATE);
+                                const menuName = m.split(/\d/)[0].trim();
+
+                                // 베트남동을 ~만동 형식으로 변환
+                                let vndDisplay;
+                                if (vndPrice >= 10000) {
+                                    const manDong = vndPrice / 10000;
+                                    vndDisplay = manDong % 1 === 0 ? `${manDong}만동` : `${manDong.toFixed(1)}만동`;
+                                } else {
+                                    vndDisplay = `${vndPrice.toLocaleString()}동`;
+                                }
+
+                                return `<p class="text-[11px] text-slate-700 flex justify-between"><span>• ${menuName}</span><span class="text-slate-500">${vndDisplay}${suffix} <span class="text-[9px]">(≈${krwPrice.toLocaleString()}원)</span></span></p>`;
+                            }
+                            return `<p class="text-[11px] text-slate-700">• ${m}</p>`;
+                        }).join('')}
+                    </div>
+
+                    <div class="flex justify-between items-center pt-2 border-t border-slate-100">
                         <span class="text-[10px] text-slate-400">📍 ${e.dist}</span>
                         <a href="https://www.google.com/maps/search/${encodeURIComponent(e.map)}" target="_blank" class="text-[10px] font-bold text-sky-600">지도보기</a>
                     </div>
